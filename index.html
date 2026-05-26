@@ -8,20 +8,29 @@
 </head>
 <body>
     <div class="container">
+
+    <div id="loginForm">
+        <h2>Login</h2>
+        
+        <input type="text" id="loginUsername" placeholder="Enter Username">
+        <input type="password" id="loginPassword" placeholder="Enter Password">
+        <button onclick="loginUser()">Login</button>
+        <p>If you are not registered yet, register first</p>
+        <button onclick="showRegister()">Go to Register</button>
+        <p id="message"></p>
+    </div>
+
+    <div id="registerForm" style="display:none;">
         <h2>Register</h2>
         
         <input type="text" id="regUsername" placeholder="Enter Username">
         <input type="password" id="regPassword" placeholder="Enter Password">
         <button onclick="registerUser()">Register</button>
-        <hr>
-
-        <h2>Login</h2>
-        <input type="text" id="loginUsername" placeholder="Enter Username">
-        <input type="password" id="loginPassword" placeholder="Enter Password">
-        <button onclick="loginUser()">Login</button>
-        <p id="message"></p>
+        <p>Already have an account?</p>
+        <button onclick="showLogin()">Go to Login</button>
+      
     </div>
-
-    <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

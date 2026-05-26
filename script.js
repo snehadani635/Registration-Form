@@ -1,13 +1,23 @@
+function showRegister(){
+    document.getElementById("loginForm").style.display="none";
+    document.getElementById("registerForm").style.display="block";
+}
+
+function showLogin(){
+    document.getElementById("registerForm").style.display="none";
+    document.getElementById("loginForm").style.display="block";
+}
+
 function registerUser(){
     let username = document.getElementById("regUsername").value;
     let password = document.getElementById("regPassword").value;
 
     if(username==""|| password==""){
         alert("Please fill all fields");
-        return;
     }
     localStorage.setItem(username, password);
     alert("Registration Successful");
+    showLogin();    
 
 }
 
@@ -22,7 +32,7 @@ function loginUser(){
     }
 
     else if(storedPassword== password){
-        document.getElementById("message").innerHTML="Login Successful";
+        alert("Login Successful");
     }
 
     else{
