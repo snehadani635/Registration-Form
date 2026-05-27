@@ -7,28 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="main">
 
-    <div id="loginForm">
+    <div class="box" id="loginForm">
         <h2>Login</h2>
         
         <input type="text" id="loginUsername" placeholder="Enter Username">
         <input type="password" id="loginPassword" placeholder="Enter Password">
         <button onclick="loginUser()">Login</button>
-        <p>If you are not registered yet, register first</p>
-        <button onclick="showRegister()">Go to Register</button>
+        <p>
+            Don't have an account?
+            <span onclick="showRegister()">Signup</span>
+        </p>
         <p id="message"></p>
     </div>
 
-    <div id="registerForm" style="display:none;">
-        <h2>Register</h2>
+    <div class="box" id="registerForm" >
+        <h2>Signup</h2>
         
         <input type="text" id="regUsername" placeholder="Enter Username">
         <input type="password" id="regPassword" placeholder="Enter Password">
         <button onclick="registerUser()">Register</button>
-        <p>Already have an account?</p>
-        <button onclick="showLogin()">Go to Login</button>
-      
+        <p>
+            Already have an account?
+            <span onclick="showLogin()">Login</span>
+        </p>
     </div>
 </div>
 <script src="script.js"></script>
